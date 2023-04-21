@@ -19,7 +19,7 @@ const NFTCard = ({ nftCardDetails }) => {
     <>
       <RootContainer>
         <Column style={{ position: "relative" }}>
-          <Image src={nftCardDetails.profilePicture}/>
+          <Image src={nftCardDetails.profilePicture} alt="nftProfile"/>
           <MonthsContainer>{`${nftCardDetails.months} Months`}</MonthsContainer>
         </Column>
         <Column margin="0px 5% 0px 3%">
@@ -31,7 +31,7 @@ const NFTCard = ({ nftCardDetails }) => {
                 style={{ marginRight: 5 }}
               >{`${nftCardDetails.bought}`}</span>
               <span>
-                <Image src={EthVector} />
+                <Image src={EthVector} alt="ether-icon"/>
               </span>
             </Subtitle>
           </BoughtAndFloorContainer>
@@ -42,7 +42,7 @@ const NFTCard = ({ nftCardDetails }) => {
                 style={{ marginRight: 5 }}
               >{`${nftCardDetails.bought}`}</span>
               <span>
-                <Image src={EthVector} />
+                <Image src={EthVector} alt="ether-icon"/>
               </span>
               {nftCardDetails.percentChange &&
                 nftCardDetails.percentChange >= 0 ? (

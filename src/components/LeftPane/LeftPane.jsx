@@ -14,8 +14,8 @@ const LeftPane = ({ user }) => {
         <Row>
           <Column margin="0px 6px 10px 0px" >
             <span style={{ position: "relative" }}>
-              <CircularProgress variant="determinate" value={50} size={88} color="secondary"/>
-              <Image src={ProfileIcon} alt="profile icon" style={{ position: "absolute", top:"48%", left:"50%", transform:"translate(-50%, -50%)"}} />
+              <CircularProgress variant="determinate" value={50} size={88} color="secondary" />
+              <Image src={ProfileIcon} alt="profile icon" style={{ position: "absolute", top: "48%", left: "50%", transform: "translate(-50%, -50%)" }} />
             </span>
             <LevelDiv>{`LVL ${user.level}`}</LevelDiv>
           </Column>
@@ -53,17 +53,17 @@ const LeftPane = ({ user }) => {
           {user.tags
             .slice(0, 2)
             .map(
-              (tag) =>
+              (tag, index) =>
                 tag && (
-                  <TagsContainerHighlighted>{`${tag.tagName} ${tag.tagPercent}%`}</TagsContainerHighlighted>
+                  <TagsContainerHighlighted key={index}>{`${tag.tagName} ${tag.tagPercent}%`}</TagsContainerHighlighted>
                 )
             )}
           {user.tags
             .slice(2)
             .map(
-              (tag) =>
+              (tag, index) =>
                 tag && (
-                  <TagsContainer>{`${tag.tagName} ${tag.tagPercent}%`}</TagsContainer>
+                  <TagsContainer key={index}>{`${tag.tagName} ${tag.tagPercent}%`}</TagsContainer>
                 )
             )}
         </Row>

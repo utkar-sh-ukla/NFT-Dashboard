@@ -32,7 +32,7 @@ const HighlightCard = ({ highlightCardDetails }) => {
       <RootContainer type={highlightCardDetails.type}>
         <Column>
           <Row margin="0px 0px 10% 0px">
-            <Image src={highlightCardDetails.picture} />
+            <Image src={highlightCardDetails.picture} alt="card-picture"/>
             <Column margin="0px 0px 0px 12px">
               <TitleText>{`${highlightCardDetails.title}`}</TitleText>
               <TypeText
@@ -48,7 +48,7 @@ const HighlightCard = ({ highlightCardDetails }) => {
                   style={{ marginRight: 5 }}
                 >{`${highlightCardDetails.transactionAmount}`}</span>
                 <span>
-                  <Image src={EthVector} />
+                  <Image src={EthVector} alt="ether-icon"/>
                 </span>
               </Subtitle>
             </BoughtAndFloorContainer>
