@@ -1,7 +1,7 @@
 import React from "react";
 import Image from 'next/image';
 import styled from "styled-components";
-import EthVector from "../assets/images/EthVector.svg";
+import Ethereum from "../assets/images/ethereum.svg";
 
 // A consistent color scheme, where every type of transaction has a
 // fixed color. For every type of transaction, we have a textColor, which
@@ -48,7 +48,7 @@ const HighlightCard = ({ highlightCardDetails }) => {
                   style={{ marginRight: 5 }}
                 >{`${highlightCardDetails.transactionAmount}`}</span>
                 <span>
-                  <Image src={EthVector} alt="ether-icon"/>
+                  <Image src={Ethereum} alt="ether-icon"/>
                 </span>
               </Subtitle>
             </BoughtAndFloorContainer>
@@ -99,19 +99,19 @@ const Column = styled.div`
 const TitleText = styled.div`
   font-size: var(--text-sm);
   font-weight: 500;
-  color: #fafafa;
+  color: var( --clr-white-100);
 `;
 
 const TypeText = styled.div`
   font-size: var(--text-xs);
   font-weight: 400;
-  color: #fafafa;
+  color: var( --clr-white-100);
   color: ${(props) =>
     props.type &&
       typeToColorMap[props.type] &&
       typeToColorMap[props.type].textColor
       ? typeToColorMap[props.type].textColor
-      : "#fafafa"};
+      : "var( --clr-white-100)"};
   align-self: flex-end;
   margin-top: 20%;
   margin-right: 10%;
@@ -125,7 +125,7 @@ const Row = styled(Column)`
 const Title = styled.div`
   font-weight: 500;
   font-size: 0.9rem;
-  color: #fafafa;
+  color: var( --clr-white-100);
   margin-top: 15%;
   margin-bottom: 9%;
 `;
@@ -136,8 +136,8 @@ const Subtitle = styled.div`
   justify-content: center;
   font-weight: 500;
   font-size: var(--text-xs);
-  color: #a2a2a2;
-  color: ${(props) => (props.white ? "#FAFAFA" : "#a2a2a2")};
+  color: var(--clr-gray-100);
+  color: ${(props) => (props.white ? "var( --clr-white-100)" : "var(--clr-gray-100)")};
   align-self: ${(props) => (props.flexEnd ? "flex-end" : "flex-start")};
 `;
 const BoughtAndFloorContainer = styled.div`

@@ -1,25 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Image from 'next/image';
-import EthVector from "../assets/images/EthVector.svg";
-
-import NFTImage1 from "../assets/images/NFTImage.svg";
-
+import Ethereum from "../assets/images/ethereum.svg";
 const NFTCard = ({ nftCardDetails }) => {
-  // const nftCardDetails = {
-  //   name: "Azuki",
-  //   id: "9839",
-  //   bought: "02.82",
-  //   floor: "12.74",
-  //   percentChange: 21.6,
-  //   profilePicture: NFTImage1,
-  //   months: 3,
-  // };
   return (
     <>
       <RootContainer>
         <Column style={{ position: "relative" }}>
-          <Image src={nftCardDetails.profilePicture} alt="nftProfile"/>
+          <Image src={nftCardDetails.profilePicture} alt="nftProfile" />
           <MonthsContainer>{`${nftCardDetails.months} Months`}</MonthsContainer>
         </Column>
         <Column margin="0px 5% 0px 3%">
@@ -31,18 +19,18 @@ const NFTCard = ({ nftCardDetails }) => {
                 style={{ marginRight: 5 }}
               >{`${nftCardDetails.bought}`}</span>
               <span>
-                <Image src={EthVector} alt="ether-icon"/>
+                <Image src={Ethereum} alt="ether-icon" />
               </span>
             </Subtitle>
           </BoughtAndFloorContainer>
           <BoughtAndFloorContainer margin="7% 0px 0px 0px">
-            <Subtitle>Bought</Subtitle>
+            <Subtitle>Floor</Subtitle>
             <Subtitle white flexEnd>
               <span
                 style={{ marginRight: 5 }}
-              >{`${nftCardDetails.bought}`}</span>
+              >{`${nftCardDetails.floor}`}</span>
               <span>
-                <Image src={EthVector} alt="ether-icon"/>
+                <Image src={Ethereum} alt="ether-icon" />
               </span>
               {nftCardDetails.percentChange &&
                 nftCardDetails.percentChange >= 0 ? (
@@ -73,7 +61,7 @@ const RootContainer = styled.div`
 const Title = styled.div`
   font-weight: 500;
   font-size:  var(--text-sm);
-  color: #fafafa;
+  color: var( --clr-white-100);
   margin-top: 20px;
   margin-bottom: 9%;
 `;
@@ -85,8 +73,8 @@ const Subtitle = styled.div`
   text-align: baseline;
   font-weight: 500;
   font-size: var(--text-xs);
-  color: #a2a2a2;
-  color: ${(props) => (props.white ? "#FAFAFA" : "#a2a2a2")};
+  color: var(--clr-gray-100);
+  color: ${(props) => (props.white ? "var( --clr-white-100)" : "var(--clr-gray-100)")};
   align-self: ${(props) => (props.flexEnd ? "flex-end" : "flex-start")};
 `;
 

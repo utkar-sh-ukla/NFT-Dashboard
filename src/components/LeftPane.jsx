@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Image from 'next/image';
-import ProfileIcon from "../../assets/images/ProfileIcon.svg";
-import TwitterIcon from "../../assets/images/twitter-icon.svg";
-import GlobeIcon from "../../assets/images/Vectorglobe-final.svg";
-import Chevron from "../../assets/images/Chevron.svg";
+import TwitterIcon from "../assets/images/twitter.svg";
+import GlobeIcon from "../assets/images/globe.svg";
+import Chevron from "../assets/images/chevron.svg";
 import { CircularProgress } from "@mui/material";
 
 const LeftPane = ({ user }) => {
@@ -14,8 +13,8 @@ const LeftPane = ({ user }) => {
         <Row>
           <Column margin="0px 6px 10px 0px" >
             <span style={{ position: "relative" }}>
-              <CircularProgress variant="determinate" value={60} size={88} style={{'color': '#FFC148', transform: "rotate(-250deg)"}} />
-              <Image src={ProfileIcon} alt="profile icon" style={{ position: "absolute", top: "48%", left: "50%", transform: "translate(-50%, -50%)" }} />
+              <CircularProgress variant="determinate" value={60} size={88} style={{color: 'var(--clr-orange-100)', transform: "rotate(-250deg)"}} />
+              <Image src={user.profileIcon} alt="profile icon" style={{ position: "absolute", top: "48%", left: "50%", transform: "translate(-50%, -50%)" }} />
             </span>
             <LevelDiv>{`LVL ${user.level}`}</LevelDiv>
           </Column>
@@ -111,7 +110,7 @@ const LevelDiv = styled.div`
   background-color: rgba(248, 169, 16, 0.1);
   font-weight: 600;
   font-size: var(--text-xs);
-  color: #ffc148;
+  color: var(--clr-orange-100);
   margin-top: 9px;
 `;
 const Title = styled.div`
@@ -123,7 +122,7 @@ const Title = styled.div`
 const Subtitle = styled.div`
   font-weight: 400;
   font-size: var(--text-xs);
-  color: #a2a2a2;
+  color: var(--clr-gray-100);
   align-self: flex-start;
   margin-top: 10px;
 `;
@@ -135,7 +134,7 @@ const TwitterContainer = styled.a`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #a2a2a2;
+  color: var(--clr-gray-100);
   font-size: var(--text-xs);
   padding: 4px 8px;
   text-decoration: none;
@@ -144,7 +143,7 @@ const TwitterContainer = styled.a`
 const SubtitleTextFontProps = styled.div`
   font-weight: 400;
   font-size: var(--text-xs);
-  color: #a2a2a2;
+  color: var(--clr-gray-100);
 `;
 
 const TwitterHandle = styled(SubtitleTextFontProps)`
@@ -176,7 +175,7 @@ const TagsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #a2a2a2;
+  color: var(--clr-gray-100);
   font-size: var(--text-xs);
   border-radius: 40px;
   padding: 6px 10px;
@@ -186,22 +185,22 @@ const TagsContainer = styled.div`
 `;
 
 const TagsContainerHighlighted = styled(TagsContainer)`
-  border-color: #ffc148;
-  color: #ffc148;
+  border-color: var(--clr-orange-100);
+  color: var(--clr-orange-100);
 `;
 
 const SubscribeButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #a2a2a2;
-  border: 1px solid #a2a2a2;
+  color: var(--clr-gray-100);
+  border: 1px solid var(--clr-gray-100);
   border-radius: 24px;
   padding: 12px 37px;
   margin-top: 32px;
   cursor: pointer;
   &:hover {
-    border-color: #ffc148;
+    border-color: var(--clr-orange-100);
   }
 `;
 

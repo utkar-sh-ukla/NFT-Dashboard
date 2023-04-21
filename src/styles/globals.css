@@ -3,6 +3,11 @@
   --font-sharp-grotesk: 'Sharp Grotesk';
   --background: #1E1E1E;
 
+  /* colors */
+  --clr-orange-100: #FFC148;
+  --clr-gray-100: #A2A2A2;
+  --clr-white-100: #FAFAFA;
+
   /* font sizes */
 
   --text-xs: 0.75rem;

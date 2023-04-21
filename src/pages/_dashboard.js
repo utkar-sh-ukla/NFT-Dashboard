@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import LeftPane from "../components/LeftPane/LeftPane";
+import LeftPane from "../components/LeftPane";
 import NFTCard from "../components/NFTCard";
-import NFTImage1 from "../assets/images/NFTImage.svg";
+import HighlightCard from "../components/HighlightCard";
+import NFTImage1 from "../assets/images/NFTImage1.svg";
 import NFTImage2 from "../assets/images/NFTImage2.svg";
 import NFTImage3 from "../assets/images/NFTImage3.svg";
 import NFTImage4 from "../assets/images/NFTImage4.svg";
@@ -12,13 +13,12 @@ import Highlight2 from "../assets/images/Highlight2-f.svg";
 import Highlight3 from "../assets/images/Highlight3-f.svg";
 import Highlight4 from "../assets/images/Highlight4-f.svg";
 import Highlight5 from "../assets/images/Highlight5-f.svg";
-import ProfileIcon from "../assets/images/ProfileIcon.svg";
-import Community1 from "../assets/images/Rectangle1599.svg";
-import Community2 from "../assets/images/Rectangle1600.svg";
-import Community3 from "../assets/images/Rectangle1601.svg";
-import Community4 from "../assets/images/Rectangle1602.svg";
+import ProfileIcon from "../assets/images/profile.svg";
+import Community1 from "../assets/images/Community1.svg";
+import Community2 from "../assets/images/Community2.svg";
+import Community3 from "../assets/images/Community3.svg";
+import Community4 from "../assets/images/Community4.svg";
 
-import HighlightCard from "../components/HighlightCard";
 
 const Dashboard = () => {
     const user = {
