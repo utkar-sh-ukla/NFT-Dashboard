@@ -14,7 +14,7 @@ const LeftPane = ({ user }) => {
         <Row>
           <Column margin="0px 6px 10px 0px" >
             <span style={{ position: "relative" }}>
-              <CircularProgress variant="determinate" value={50} size={88} color="secondary" />
+              <CircularProgress variant="determinate" value={60} size={88} style={{'color': '#FFC148', transform: "rotate(-250deg)"}} />
               <Image src={ProfileIcon} alt="profile icon" style={{ position: "absolute", top: "48%", left: "50%", transform: "translate(-50%, -50%)" }} />
             </span>
             <LevelDiv>{`LVL ${user.level}`}</LevelDiv>

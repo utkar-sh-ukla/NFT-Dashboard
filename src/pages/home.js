@@ -181,12 +181,12 @@ const Dashboard = () => {
                 <Column margin="5% 0px 0px 0px">
                     <Row margin="0px 0px 4% 0px">
                         {highlightCardDetailsList.map((highlightCardDetails, index) => (
-                            <HighlightCard highlightCardDetails={highlightCardDetails} key={index}/>
+                            <HighlightCard highlightCardDetails={highlightCardDetails} key={index} />
                         ))}
                     </Row>
                     <Row>
                         {nftCardDetailsList.map((nftCardDetails, index) => (
-                            <NFTCard nftCardDetails={nftCardDetails} key={index}/>
+                            <NFTCard nftCardDetails={nftCardDetails} key={index} />
                         ))}
                     </Row>
                 </Column>
