@@ -42,9 +42,9 @@ const LeftPane = ({ user }) => {
           </SubtitleTextFontProps>
           <Row wrap>
             {user.commonCommunities.length > 0 &&
-              user.commonCommunities.map((community) => (
-                <CommonCommunityContainer>
-                  <Image src={community.communityPhoto} />
+              user.commonCommunities.map((community, index) => (
+                <CommonCommunityContainer key={index}>
+                  <Image src={community.communityPhoto} alt="community-photo"/>
                 </CommonCommunityContainer>
               ))}
           </Row>
@@ -69,7 +69,7 @@ const LeftPane = ({ user }) => {
         </Row>
         <SubscribeButtonContainer>
           <span>Subscribe</span>
-          <Image src={Chevron} style={{ marginLeft: "8px" }} />
+          <Image src={Chevron} style={{ marginLeft: "8px" }} alt="chevron-icon"/>
         </SubscribeButtonContainer>
       </RootContainer>
     </>
