@@ -1,6 +1,6 @@
-# Wall Frontend Assignment
+# NFT Dashboard
 
-This repository contains the frontend assignment for Wall.
+Welcome to the NFT Dashboard application! This static dashboard provides an overview of your NFT (Non-Fungible Token) collection, allowing you to manage and track your digital assets seamlessly.
 
 ##  Setup
 
